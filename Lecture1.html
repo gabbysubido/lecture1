@@ -1,0 +1,154 @@
+<!--Links (Local, External and Same Page)
+<a href="url or #id">Click here!</a>
+
+New HTML5 Elements
+<header>
+<nav>
+<section>
+<footer>
+<audio>
+<video>
+<datalist>
+-->
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Lecture 1</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--This makes sure the web page is scaled according to the size of the screen-->
+      <style>
+        ol li {
+          color: red;
+        }
+        ul > li {
+          color: blue;
+        }
+        input[type=number] {
+          background-color: yellow;
+        }
+        input[type=text] {
+          background-color: red;
+        }
+        button:hover {
+          background-color: orange;
+        }
+        a::before {
+          content: "\21d2 Click here: ";
+          font-weight: bold;
+        }
+        p::selection {
+          color: red;
+          background-color: yellow;
+        }
+        @media print {
+          .screen-only{
+            display: none;
+          }
+        }
+        @media (max-width: 500px){
+          h1 {
+            background-color: red;
+          }
+          h2::before {
+            content: "SHOCKING!";
+          }
+        }
+        @media (min-width: 501px) {
+          h2::before {
+            content: "HELLO!";
+          }
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .container > h3 {
+            background-color: springgreen;
+            font-size: 20px;
+            margin: 20px;
+            padding: 20px;
+            width: 200px;
+        }
+        .grid {
+            background-color: green;
+            display: grid;
+            padding: 20px;
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            grid-template-columns: 200px 200px auto;
+        }
+
+        .grid-item {
+            background-color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+      </style>
+    </head>
+    <body>
+      <form>
+        <div>
+          <input name="name" type="text" placeholder="name">
+            <input name="password" type="password" placeholder="password"> <!--Makes sure letters are not revealed.-->
+        </div>
+        <div>
+          Favorite color?
+          <input name="color" type="radio" value="red">Red
+          <input name="color" type="radio" value="green">Green
+        </div>
+        <div>
+          <input name="country" list="countries" placeholder="Country">
+          <datalist id="countries">
+            <option value="Afganistan">
+            <option value="Albania">
+          </datalist>
+        </div>
+        <div>
+          <ol>
+            <li>I'm</li>
+            <li>red.</li>
+          </ol>
+          <ul>
+            <li>Hello</li>
+            <ol>
+              <li>it's</li>
+              <li>me</li>
+            </ol>
+          </ul>
+          <form>
+            <input name="name" type="number" placeholder="Age"> <!--This restricts input field to numbers.-->
+            <input name="name" type="text" placeholder="Name">
+          </form>
+          <button>Click me!</button> <!--pseudoclass selector-->
+          <a href="#">one link</a>  <!--pseudoelement selector-->
+          <a href="#">another link</a> <!--Pound sign means null.-->
+          <p>This is my code.</p> <!--The bg color and text color changes once highlighted.-->
+          <p class="screen-only">This paragraph won't appear when you print this page</p>
+          <h1>Hello</h1>
+          <h2></h2>
+        </div>
+        <div class="container">
+          <h3>AAAAAAAAAAAAAAA</h3>
+          <h3>AAAAAAAAAAAAAAA</h3>
+          <h3>AAAAAAAAAAAAAAA</h3>
+          <h3>AAAAAAAAAAAAAAA</h3>
+          <h3>AAAAAAAAAAAAAAA</h3>
+          <h3>AAAAAAAAAAAAAAA</h3>
+      </div>
+      <div class="grid">
+          <div class="grid-item">1</div>
+          <div class="grid-item">2</div>
+          <div class="grid-item">3</div>
+          <div class="grid-item">4</div>
+          <div class="grid-item">5</div>
+          <div class="grid-item">6</div>
+          <div class="grid-item">7</div>
+          <div class="grid-item">8</div>
+          <div class="grid-item">9</div>
+          <div class="grid-item">10</div>
+          <div class="grid-item">11</div>
+          <div class="grid-item">12</div>
+      </div>
+</html>
+<!--
